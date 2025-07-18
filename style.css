@@ -1,0 +1,96 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+body{
+    background:  hsl(216, 12%, 8%);
+  font-family: "Overpass", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 300px;
+  font-style: normal;
+  font-size: 15px;
+}
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+
+}
+.card{
+    height: 350px;
+    width: 350px;
+    background:  hsl(213, 19%, 18%);
+    border-radius: 20px;
+}
+.star{
+    width: 30px;
+    height: 30px;
+    background:#2d3842;
+    border-radius: 100%;
+    padding: 5px;
+    margin: 25px;
+}
+.star img{
+    width: 13px;
+    height: 13px;
+    position: relative;
+    left: 8px;
+    top: 7px;
+}
+.text h1{
+    color: white;
+    font-size: 20px;
+    margin-left: 25px;
+}
+.text p{
+    color:  hsl(217, 12%, 63%);
+    font-size: 13px;
+    margin-left: 25px;
+    padding-top: 10px;
+    line-height: 20px;
+    padding-right: 10px;
+}
+.rating{
+    display: flex
+
+}
+.button{
+    width: 40px;
+    height: 40px;
+    background: #2d3842;
+    border-radius: 100%;
+    margin-left: 20px;
+    margin-top: 20px;
+    display: flex;
+    justify-content: center ;
+    align-items: center;
+}
+.button p{
+    color: hsl(217, 12%, 63%);
+    font-size: 14px;
+}
+.submit-container{
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+}
+.submit{
+    width:95%;
+    background: hsl(0, 100%, 100%);
+    border-radius: 40px;
+    padding: 12.5px;
+    display: flex;
+    justify-content: center;
+}
+.submit p{
+    letter-spacing: 2px;
+    font-weight: bold
+}
+.button:hover{
+    background: hsl(25, 97%, 53%);
+    cursor: pointer;
+    p{
+        color:black;
+    }
+}
