@@ -5,11 +5,18 @@
 body{
     background:  hsl(216, 12%, 8%);
   font-family: "Overpass", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: 300px;
-  font-style: normal;
-  font-size: 15px;
+ 
 }
+:root {
+  --orange: hsl(25, 97%, 53%);
+  --white: hsl(0, 0%, 100%);
+  --lightGrey: hsl(217, 12%, 63%);
+  --mediumGrey: hsl(216, 12%, 54%);
+  --mediumGreyOp: hsla(216, 12%, 54%, 0.2);
+  --darkBlue: hsl(213, 19%, 18%);
+  --veryDarkBlue: hsl(216, 12%, 8%);
+}
+
 .container{
     display: flex;
     justify-content: center;
@@ -17,80 +24,114 @@ body{
     height: 100vh;
 
 }
+
 .card{
-    height: 350px;
-    width: 350px;
-    background:  hsl(213, 19%, 18%);
+    width: 50%;
+    height: 45%;
+    background: var(--darkBlue);
     border-radius: 20px;
+    padding: 25px;
 }
-.star{
-    width: 30px;
-    height: 30px;
-    background:#2d3842;
+.star-icon{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--mediumGreyOp);
+    width: 35px;
+    height: 35px;
     border-radius: 100%;
-    padding: 5px;
-    margin: 25px;
 }
-.star img{
-    width: 13px;
-    height: 13px;
-    position: relative;
-    left: 8px;
-    top: 7px;
+.star-icon img{
+    width: 15px;
+    height: 15px;
 }
-.text h1{
-    color: white;
+.heading{
+    color: var(--white);
+    font-weight: 700;
     font-size: 20px;
-    margin-left: 25px;
+    margin-top: 20px ;
 }
-.text p{
-    color:  hsl(217, 12%, 63%);
-    font-size: 13px;
-    margin-left: 25px;
-    padding-top: 10px;
-    line-height: 20px;
-    padding-right: 10px;
+.description{
+    font-size: 12.5px;
+    color: var(--lightGrey);
+    margin-top: 15px;
+    font-weight: 400;
 }
 .rating{
-    display: flex
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
 
 }
-.button{
-    width: 40px;
-    height: 40px;
-    background: #2d3842;
-    border-radius: 100%;
-    margin-left: 20px;
-    margin-top: 20px;
+.numbers{
     display: flex;
-    justify-content: center ;
+    justify-content: center;
     align-items: center;
+    background: var(--mediumGreyOp);
+    color: var(--mediumGrey);
+    width: 35px;
+    height: 35px;
+    border-radius: 100%;
+    font-weight: 700;
+    cursor: "";
 }
-.button p{
-    color: hsl(217, 12%, 63%);
-    font-size: 14px;
-}
-.submit-container{
-    display: flex;
-    justify-content: center;
-    padding: 20px;
-}
-.submit{
-    width:95%;
-    background: hsl(0, 100%, 100%);
-    border-radius: 40px;
+button{
+    width: 100%;
     padding: 12.5px;
+    margin-top: 20px;
+    background-color: var(--orange);
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border-radius: 30px;
+    border: none;
+    cursor:""
+}
+/*media query*/
+/* Responsive Media Queries */
+@media screen and (min-width:375px){
+    .card{
+        width: 20%;
+    }
+    button{
+        margin-top: 30px;
+    }
+}
+/*thanyou */
+.image{
     display: flex;
     justify-content: center;
+    width: 100%;
 }
-.submit p{
-    letter-spacing: 2px;
-    font-weight: bold
+.text2{
+    text-align: center;
+    /* margin-top: 60px; */
 }
-.button:hover{
-    background: hsl(25, 97%, 53%);
-    cursor: pointer;
-    p{
-        color:black;
-    }
+.thank-you{
+    display: none;
+}
+.rating-card{
+    display: block;
+}
+.rating-active{
+    background: white;
+    color: black;
+}
+.rated{
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+.selectedRating{
+    display: flex;
+    justify-content: center;
+    width: 50%;
+    margin: 10px;
+    
+    padding: 5px 0;
+    font-weight: 400;
+    font-size: 12px;
+    background-color: var(--mediumGreyOp);
+    color: var(--orange);
+    border-radius: 30px;
 }
